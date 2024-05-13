@@ -9,3 +9,9 @@
 ### I used the TMDB api for getting data about movies used in the game. https://developer.themoviedb.org/reference/intro/getting-started
 
 ### I used AI (chatGPT) a lot during the making of this application. However, I didn't use it for generating code or anything like that, but for learning purposes, such as for understanding how different commands work and what they do. I also utilized AI on the HTML side for giving examples, inspiration and just for a quick check on how certain things are done (basic stuff such as how to change colors, move classes around etc). Overall, I used AI a lot, but the things I asked from it were things that could have been found from the internet really easily, and AI only sped up the finding process.
+
+## If you want to use this application, you have to get your own TMDB api key from https://www.themoviedb.org/.
+
+### When you have your api key, create a new file called .env to the project's root folder.
+
+### Then write the following to the file: VITE_TMDB_API_KEY=yourapikey123
