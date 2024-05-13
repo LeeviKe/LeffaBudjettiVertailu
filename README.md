@@ -15,3 +15,4 @@
 ### When you have your api key, create a new file called .env to the project's root folder.
 
 ### Then write the following to the file: VITE_TMDB_API_KEY=yourapikey123
+### You also have to install vite. (npm i vite)
