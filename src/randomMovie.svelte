@@ -4,7 +4,7 @@
 <script context="module">
   import movieList from './moviesStore';
 
-  const api_key = import.meta.env.VITE_TMBD_API_KEY;
+  const api_key = import.meta.env.VITE_TMDB_API_KEY;
   let movielist = [];
 
   movieList.subscribe((array) => {
