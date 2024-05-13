@@ -1,79 +1,197 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: radial-gradient(circle, #972fff, #000000);
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.title1 {
+  font-size: small;
   text-align: center;
+  color: white;
+  height: auto;
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 50%;
+  position: absolute;
+}
+.title2 {
+  font-size: small;
+  text-align: center;
+  color: white;
+  height: auto;
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 50%;
+  position: absolute;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.images {
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image1 {
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  margin-right: 10px;
+  display: block;
+}
+.image2 {
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  margin-left: 10px;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.image1:hover .overlay {
+  opacity: 1;
+}
+.image2:hover .overlay {
+  opacity: 1;
+}
+
+.images button {
+  border: none;
+  padding: 0;
+  background: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* GameOverModal things */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+.modal {
+  padding: 1rem;
+  position: fixed;
+  top: 10vh;
+  left: 15vh;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, #972fff, #000000);
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal button {
+  margin: 5px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #1f1f1f; /* Dark background color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth effect */
+  cursor: pointer;
+  font-size: 16px;
+}
+/* GameOverModal things end */
+
+/* MainMenuModal things */
+
+.mainMenuModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #972fff, #000000);
+  top: 0px;
+  z-index: 110;
+
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainMenuModal .test {
+  z-index: 120;
+  position: absolute;
+}
+
+.overlay2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* right: 8px; */
+}
+
+.mainMenuModal button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #1f1f1f; /* Dark background color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth effect */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.mainMenuModal .test {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainMenuModal .test button {
+  margin-top: 10%;
+}
+/* MainMenuModal things end */
+
+.tmdbLogo {
+  width: 3%;
+  height: auto;
+  opacity: 75%;
+  display: flex;
+  position: relative;
+  left: 96%;
+  bottom: 6vh;
+}
+
+.tmbdAttribution {
+  top: 150px;
+  display: flex;
+  position: relative;
 }
